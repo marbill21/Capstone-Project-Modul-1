@@ -246,7 +246,8 @@ while(True) :
                     else: break
                 print('\nData Peminjam Koleksi Buku Perpustakaan Guna Jaya:')
                 print(f"\n{'Nama Peminjam':<18} {'| NIK KTP':<19} {'| Nama Koleksi Buku':<28} {'| Quantity':^5} {'| Tanggal Meminjam':<19} {'| Masa Pinjam':^12}")
-                print(f"{namaPeminjam:<20} {NIK_KTP:<19} {keranjangPinjam[indexPinjam]['Nama Koleksi Buku']:<28} {keranjangPinjam[indexPinjam]['Quantity']:^10} {tanggalPinjam:>5}/{bulanPinjam:^3}/{tahunPinjam:^5} {keranjangPinjam[indexPinjam]['Masa Pinjam']:^18}")
+                for item in keranjangPinjam :
+                    print(f"{namaPeminjam:<20} {NIK_KTP:<19} {keranjangPinjam[item]['Nama Koleksi Buku']:<28} {keranjangPinjam[item]['Quantity']:^10} {tanggalPinjam:>5}/{bulanPinjam:^3}/{tahunPinjam:^5} {keranjangPinjam[item]['Masa Pinjam']:^18}")
                 for item in keranjangPinjam :
                     tanggalKembali = tanggalPinjam + keranjangPinjam[item]['Masa Pinjam']
                     bulanKembali = bulanPinjam
@@ -264,5 +265,5 @@ while(True) :
                 break
 
     elif(pilihanMenu == "6") :
-        print('\n~ Anda Telah Berhasil Keluar Dari Program ~')
+        print('\n~ Anda Telah Berhasil Keluar Dari Program ~\n')
         break
