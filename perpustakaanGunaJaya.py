@@ -205,12 +205,11 @@ while(True) :
             keranjangPinjam.update({indexPinjam: pinjamBuku})
             sisaStock = listBuku[indexPinjam]["Stock"] - 1
             listBuku[indexPinjam].update({"Stock":sisaStock})
-            print(sisaStock)
             print('\nIsi Keranjang Pinjam :\n')
             print(f"{'Index':<6} {'| Nama Koleksi Buku':<30} {'| Tahun Terbit':^13} {'| Quantity':^5} {'| Masa Pinjam':^12}")
             print(f"{indexPinjam:<8} {keranjangPinjam[indexPinjam]['Nama Koleksi Buku']:<30} {keranjangPinjam[indexPinjam]['Tahun Terbit']:^14} {keranjangPinjam[indexPinjam]['Quantity']:^9} {keranjangPinjam[indexPinjam]['Masa Pinjam']:^12}")   
             checker = input('\nApakah Anda Mau Meminjam Buku Yang Lain? (YES/NO) : ')
-            if(checker == 'YES'): #masih problem
+            if(checker == 'YES'):
                 continue 
             elif(checker == 'NO'):
                 print('\nKoleksi Buku Yang Akan Dipinjam : \n')
